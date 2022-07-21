@@ -1,0 +1,1 @@
+new Swiper(".swiper-container",{direction:"horizontal",loop:!1,slidesPerView:1,spaceBetween:15,slidesPerGroup:1,pagination:{el:".swiper-pagination",clickable:!0,dynamicBullets:!0},simulateTouch:!0,touchRatio:1,touchAngle:45,grabCursor:!0,keyboard:{enabled:!0,onlyInViewport:!0,pageUpDown:!0},mousewheel:{sensitivity:1,eventsTarget:".swiper-container"}});

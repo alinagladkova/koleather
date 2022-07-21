@@ -1,0 +1,132 @@
+@import "mixins.scss";
+
+.header {
+	height: 90px;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	background-color: #141414;
+	z-index: 10;
+
+	&__container {
+		padding: 15px;
+		height: 100%;
+		@include flexbox();
+		align-items: center;
+		justify-content: space-between;
+		}
+
+	&__logo {
+		/*display: inline-block; //для адаптива
+		img{max-width:100%;} //для адаптива*/
+		padding: 10px 132px 10px 0;
+		margin-right: 15px;
+	}
+
+	&__menu {
+
+	}
+}
+
+.menu {
+	flex: 1 1 auto;
+
+	&__icon {
+	}
+
+	&__body {
+	}
+
+	&__list {
+		@include flexbox();
+			li{
+					position: relative;
+					margin: 0 0 0 121px;
+				}
+	}
+	&__link {
+		color: #EAEAEA;
+		font-size: 20px;
+		font-weight: 400;
+		line-height: 29px;
+		text-align: center;
+		display: block;
+		@include anim(0.3,0s);
+		&:hover{
+			color: #E7B56A
+		}
+	}
+
+	@media (max-width:1136px){
+		&__logo {
+				padding-right: 0;
+		}
+		&__list {
+				li{
+					align-items: center;
+					justify-content: center;
+					margin: 0 0 0 60px;
+					&:first-child{
+						margin: 0 0 0 0;
+						}
+					}
+		}
+	}
+
+	@media (max-width:832px){
+		&__body {
+			position: fixed;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			background-color: #E7B56A;
+			padding: 150px 0 20px 0;
+			@include tr(0px,-100%,0px);
+			&.active{
+				@include tr(0px,0px,0px);
+			}
+		}
+		&__list{
+			@include flexbox();
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			li{
+				margin: 0 0 0 0;
+				padding: 0 0 50px 0;
+			}
+		}
+		&__link{
+			color: #141414;
+			font-size: 30px;
+			font-weight: 500;
+		}
+	}
+}
+
+.icon-menu {
+	display: none;
+	@media (max-width: 832px){
+		display: block;
+		position: absolute;
+		top: 35px;
+		right: 20px;
+		width: 40px;
+		height: 25px;
+		cursor: pointer;
+		z-index: 5;
+			span{@include anim(0.3s,0s);top: 11.5px;left: -10px; position: absolute;width: 100%;height: 2px;background-color: #fff;
+			&:first-child{top: 1px;}
+			&:last-child{top: auto;bottom: 1px;}
+		}
+		&.active{
+			span{@include scale(0);background-color: #141414;
+				&:first-child{@include rotate(-45deg);top: 11.5px;}
+				&:last-child{@include rotate(45deg);bottom: 11.5px;}
+			} //active задали через js при нажатии на меню
+		}
+	}
+}

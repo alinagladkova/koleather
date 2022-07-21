@@ -1,0 +1,359 @@
+.shop {
+	min-width: 0;
+	position: relative;
+	height: 816px;
+	background: #141414;
+	&__container {
+		
+	}
+	&__body {
+		position: relative;
+		width: 1170px;
+		height: 816px;
+		
+	}
+	&__icon {
+		//position: absolute;
+		//top: 50px;
+		//left: 1050px;
+		
+	img {
+		position: relative;
+		z-index: 5;
+		margin: 5px 7px;
+	}
+	span {
+		width: 35px;
+		height: 20px;
+		border-radius: 20px;
+		line-height: 25px;
+		background-color: #F4F4F4;
+		position: absolute;
+		left: 10px;
+		top: 35px;
+		font-size: 18px;
+		text-align: center;
+		justify-content: center;
+		font-weight: 900;
+		color: #252525;
+		transform: translate(50%, 0);
+		z-index: 5;
+		justify-content:flex-end;
+	}
+	}
+}
+.icon-shop {
+	position: absolute;
+		top: 50px;
+		left: 1050px;
+		&::before{
+			content: '';
+			display: block;
+			position: absolute;
+				width: 50px;
+				height: 50px;
+				background: #F8B15F;
+				border-radius: 50%;
+	}
+	@media (max-width:1200px) {
+		left: 900px;
+}
+}
+.shop__icon {
+	&:hover {
+		padding: 5px 5px 5px 0;
+		transition-duration: 0.2s;
+		}
+		&:active {
+cursor: pointer;
+		}
+}
+.wrapper {
+width: 1170px;
+height: 816px;
+}
+.shop-slider {
+	@include flexbox();
+	position: relative;
+	//width: 1170px;
+	height: 445px;
+	margin: 93px 0 54px 0;
+	justify-content: space-between;
+	@media (max-width:1200px) {
+		width: 980px;
+}
+
+	&__wrapper {
+		position: relative;
+		min-width: 0;
+		height: 430px;
+		
+	}
+	&__title {
+		width: 400px;
+		height: 25.5px;
+		font-weight: 500;
+		font-size: 22px;
+		line-height: 27px;
+		text-align: center;
+		color: #FFFFFF;
+		margin-bottom: 30px;
+	}
+	&__text {
+		width: 400px;
+		height: 166.19px;
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 22px;
+		color: #FFFFFF;
+	}
+	&__price {
+		width: 95px;
+		height: 27.38px;
+		font-weight: 600;
+		font-size: 24px;
+		line-height: 29px;
+		color: #F8B15F;
+		position: relative;
+		left: 0;
+	}
+	&__button {
+	box-sizing: border-box;
+	position: relative;
+	margin: 75px 0 0 250px;
+	width: 151px;
+	height: 50px;
+	background: #F8B15F;
+	border: 3px solid #F4F4F4;
+	box-shadow: 9px 8px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 78px;
+	font-weight: 500;
+	font-size: 24px;
+	line-height: 29px;
+	text-align: center;
+	color: #0A0A0A;
+	&:hover {
+		background-color: #252525;
+		border: 1px solid #FFFFFF;
+		box-shadow: 9px 8px 4px rgba(0, 0, 0, 0.25);
+		color: #F8B15F;
+	}
+	&:active {
+		text-decoration: underline;
+	}
+}
+}
+
+.text {
+	&__description {
+		margin-bottom: 15px;
+	}
+	&__color {
+		margin-bottom: 5px;
+		span {
+			color: #F8B15F;
+		}
+	}
+	&__width {
+		margin-bottom: 5px;
+		span {
+			color: #F8B15F;
+		}
+	}
+	&__buckle {
+		margin-bottom: 15px;
+		span {
+			color: #F8B15F;
+		}
+	}
+}
+.shop-slider {
+	&__slide {
+		display: flex;
+		justify-content:space-between;
+		align-items:center;
+	}
+	&__image {
+		min-width: 0;
+		display: flex;
+		flex: 0 1 auto;
+		position: absolute;
+		left: 0;
+		margin-left: 150px;
+	}
+	&__content {
+		min-width: 0;
+		flex: 0 1 auto;
+		flex-direction:column;
+		position: absolute;
+		right: 0;
+		margin: 0 100px;
+	}
+}
+.swiper-container {
+	@media (max-width:1200px) {
+			width: 990px;
+	}
+}
+.swiper-wrapper {
+}
+.call-request {
+		position: absolute;
+		height: 224px;
+		width: 1170px;
+		left: 0;
+		top: 570px;
+		&__block {
+			position: relative;
+			text-align: center;
+			width: 1170px;
+			height: 224px;
+		}
+	
+		&__text {
+			position: relative;
+			width: 469px;
+			height: 55px;
+			font-weight: 500;
+			font-size: 18px;
+			line-height: 22px;
+			text-align: center;
+			margin: 55px auto 0 auto;
+			color: #FFFFFF;
+		}
+	
+		&__button {
+			box-sizing: border-box;
+			position: relative;
+			margin: 20px 0 0 0;
+			width: 262px;
+			height: 60px;
+			background: #F8B15F;
+			border: 3px solid #F4F4F4;
+			box-shadow: 9px 8px 4px rgba(0, 0, 0, 0.25);
+			border-radius: 78px;
+			font-weight: 600;
+			font-size: 24px;
+			line-height: 29px;
+			text-align: center;
+			color: #0A0A0A;
+		}
+	
+}
+
+.swiper-slide {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+}
+
+.swiper-slide img {
+	max-width: 100%;
+	height: 365px;
+	width: 287px;
+	//display: block;
+}
+
+.pag-shop{
+	position: absolute;
+}
+.swiper-pagination-fraction {
+	font-size: 18px;
+	color: #F8B15F;
+}
+.swiper-pagination-current {
+	font-size: 22px;
+}
+
+.swiper-button-prev .prev-shop,
+.swiper-button-next .next-shop {
+					position: absolute;
+					top: 40%; // изменить положение кнопок на 33% если получится сделать 3 картинки в ряду
+					width: 35px;
+					height: 33px;
+					background: #F8B15F;
+					border-radius: 50%;
+					cursor: pointer;
+					&::after{
+						content: '';
+						width: 15px;
+						height: 15px;
+						position: absolute;
+					}
+}
+.swiper-button-prev .prev-shop::after{
+		border-top: 2px solid #141414;
+		border-left: 2px solid #141414;
+		transform: rotate(-45deg);
+		margin-left: 5px;
+}
+.swiper-button-next::after{
+		border-top: 2px solid #141414;
+		border-left: 2px solid #141414;
+		transform: rotate(135deg);
+		margin-right: 5px;
+}
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+	&::after{
+		border-top: 2px solid #F4F4F4;
+		border-left: 2px solid #F4F4F4;
+	}
+}
+.swiper-button-prev:active,
+.swiper-button-next:active {
+	background: #F8B15F;
+}
+.call-request {
+	background-color: #141414;
+			&__block {
+				position: relative;
+				//top: 0;
+				//left: 0;
+				height: 224px;
+				width: 1170px;
+				//text-align: center;
+				@media (max-width:1200px) {
+					margin-left: -60px;
+			}
+			}
+			&__text {
+				width: 469px;
+				height: 55px;
+				font-weight: 400;
+				font-size: 18px;
+				line-height: 22px;
+				text-align: center;
+				color: #FFFFFF;
+				text-shadow: 5px 9px 4px rgba(0, 0, 0, 0.4);
+				margin: 0 auto;
+		
+			}
+			&__button {
+				box-sizing: border-box;
+				position: relative;
+				margin-top: 20px;
+				width: 262px;
+				height: 60px;
+				background: #F8B15F;
+				border: 3px solid #F4F4F4;
+				box-shadow: 9px 8px 4px rgba(0, 0, 0, 0.25);
+				border-radius: 78px;
+				font-weight: 600;
+				font-size: 24px;
+				line-height: 29px;
+				text-align: center;
+				color: #0A0A0A;
+				&:hover {
+					background-color: #252525;
+					border: 1px solid #FFFFFF;
+					box-shadow: 9px 8px 4px rgba(0, 0, 0, 0.25);
+					color: #F8B15F;
+				}
+				&:active {
+					text-decoration: underline;
+				}
+			}
+}
